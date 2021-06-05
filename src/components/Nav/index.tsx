@@ -1,22 +1,25 @@
-import { Menu } from "../Menu";
+import { Menu, smallScreenDropdownItems } from "./Menu";
 import logo from "./logo.png";
-import { MenuIcon, SearchIcon } from "@heroicons/react/outline";
+import { SearchIcon } from "@heroicons/react/outline";
+import { SmallScreenDropdown } from "./Dropdown";
 
 function Nav() {
   return (
-    <nav className="flex justify-between items-center mt-10 font-black text-lg">
+    <nav className="flex justify-between items-center text-md mt-10 font-black xl:text-lg">
       <Menu />
-      <img src={logo} alt="" className="h-20 w-20" />
-      <button className="lg:hidden">
-        <MenuIcon className="h-8 w-8" />
-      </button>
-      <div className="hidden lg:block lg:flex-1">
-        <button className="ml-auto block">
-          <SearchIcon className="w-6 h-6" />
-        </button>
+      <AppLogo />
+      <div className="hidden lg:flex lg:flex-1">
+        <SearchIcon className="w-6 h-6 ml-auto cursor-pointer" />
+      </div>
+      <div className="lg:hidden">
+        <SmallScreenDropdown dropdownItems={smallScreenDropdownItems} />
       </div>
     </nav>
   );
 }
+
+const AppLogo = () => {
+  return <img src={logo} alt="" className="h-20 w-20" />;
+};
 
 export { Nav };
