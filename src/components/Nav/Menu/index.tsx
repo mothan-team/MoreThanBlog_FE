@@ -43,7 +43,7 @@ export const smallScreenDropdownItems: Items[] = [
 
 export const Menu = () => {
   return (
-    <ul className="hidden lg:flex gap-10 lg:flex-1">
+    <ul className="hidden lg:flex items-center gap-10 lg:flex-1">
       {largeScreenMenuItems.map((item) => (
         <li key={item.to}>
           <NavLink {...item} />
