@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import "@reach/dialog/styles.css";
 import App from "./App";
 import { AppProviders } from "context";
 
