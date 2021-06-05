@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Dialog } from "@reach/dialog";
+import { callAll } from "utils";
 
 interface IModalContext {
   isOpen: boolean;
@@ -13,12 +14,6 @@ interface ModalProps {
 interface ModalButtonProps {
   children: React.ReactElement<any, string | React.JSXElementConstructor<any>>;
 }
-
-const callAll =
-  (...fns: Function[]) =>
-  (...args: any) => {
-    fns.forEach((fn) => fn && fn(...args));
-  };
 
 const ModalContext = React.createContext({} as IModalContext);
 

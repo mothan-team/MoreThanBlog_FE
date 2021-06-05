@@ -7,7 +7,7 @@
   position: absolute;
   height: 0.5rem;
   width: 0.5rem;
-  @apply bg-gray-200;
+  @apply bg-gray-400;
   top: -0.15rem;
   right: -0.5rem;
   border-radius: 50%;
