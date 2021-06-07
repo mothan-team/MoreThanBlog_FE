@@ -1,3 +1,5 @@
+[![CI/CD](https://github.com/mothan-team/MoreThanBlog_FE/actions/workflows/config.yml/badge.svg)](https://github.com/mothan-team/MoreThanBlog_FE/actions/workflows/config.yml)
+
 # NOTE
 
 ## Redux
