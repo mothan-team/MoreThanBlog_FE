@@ -1,5 +1,5 @@
-import AppRoutes from "./AppRoutes";
-import { Nav } from "components/Nav";
+import AppRoutes from './AppRoutes'
+import { Nav } from 'components/Nav'
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       ></div>
     </div>
     //test git
-  );
+  )
 }
 
-export default App;
+export default App
