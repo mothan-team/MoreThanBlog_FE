@@ -4,6 +4,7 @@ import "./index.css";
 import "@reach/dialog/styles.css";
 import App from "./App";
 import { AppProviders } from "context";
+import 'font-awesome/css/font-awesome.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
