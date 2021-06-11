@@ -1,0 +1,211 @@
+.mtt-article .feature-header-item1, .feature-header-item2 {
+    width: 48%;
+}
+
+.mtt-article .feature-header-item1 a:first-child, .feature-header-item2 a:first-child{
+    width: 96px;
+}
+
+.mtt-article .feature-header-item1 img, .feature-header-item2 img{
+    width: 100%;
+    height: 100%;
+}
+
+.mtt-article .feature-header-item1 {
+    background-color: #c3f4df;
+}
+
+.mtt-article .feature-header-item2 {
+    background-color: #b0f3f6;
+}
+
+.mtt-article .top-feature {
+    margin-top: 40px;
+    position: relative;
+}
+
+.mtt-article .top-feature-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mtt-article .top-feature-wrap > div {
+    width: 15%;
+    height: auto;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.mtt-article .top-feature-wrap > div:hover {
+    transform: translateY(-0.25rem);
+}
+
+.mtt-article .top-feature-wrap > div > img {
+    border-radius: 1.5rem;
+    height: 150px;
+    width: 100%;
+}
+
+.mtt-article .top-feature-wrap .card-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.mtt-article .top-feature-wrap .title {
+    word-wrap: break-word;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.mtt-article .top-feature-wrap .author-wrap {
+    margin-top: 10px;
+}
+
+.mtt-article .top-feature-wrap .author {
+    word-wrap: break-word;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.mtt-article .top-feature-wrap .author:hover {
+    text-decoration: underline;
+}
+
+.mtt-article .top-feature-wrap .card-1 {
+    background-color: #e8e5ff;
+}
+
+.mtt-article .top-feature-wrap .card-2 {
+    background-color: #ede7e7;
+}
+
+.mtt-article .top-feature-wrap .card-3 {
+    background-color: #e5f4ca;
+}
+
+.mtt-article .top-feature-wrap .card-4 {
+    background-color: #c3f4df;
+}
+
+.mtt-article .top-feature-wrap .card-5 {
+    background-color: #ffeab9;
+}
+
+.mtt-article .top-feature .title-group {
+    position: absolute;
+    transform: translateX(-130px) rotate(-90deg);
+    width: 175px;
+    font-size: 0.65rem;
+    font-weight: 1000;
+    letter-spacing: 8px;
+}
+
+.mtt-article .article {
+    margin-top: 80px;
+    padding: 0 100px;
+    position: relative;
+}
+
+.mtt-article .article .lastest-post-title-group {
+    position: absolute;
+    transform: translateX(-345px) rotate(-90deg);
+    width: 600px;
+    font-size: 0.65rem;
+    font-weight: 1000;
+    letter-spacing: 8px;
+}
+
+.mtt-article .article-wrap .article-lastest {
+    display: flex;
+}
+
+.mtt-article .article-wrap .article-lastest > a {
+    width: 50%;
+    height: 600px;
+    margin-right: 50px;
+}
+
+.mtt-article .article-wrap .article-lastest .thumbnail {
+    border-radius: 4rem;
+    height: 100%;
+}
+
+.mtt-article .article-wrap .info {
+    padding: 35px 0;
+    width: 50%;
+}
+
+.mtt-article .article-wrap .info .tag {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.mtt-article .article-wrap .info .tag-item {
+    background-color: #ededed;
+    padding: 10px 15px;
+    border-radius: 1.5rem;
+    transition: .2s ease;
+    transition-property: background-color;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.mtt-article .article-wrap .info .tag-item:hover {
+    background-color: #e3e3e3;
+}
+
+.mtt-article .article-wrap .info .title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.mtt-article .article-wrap .info .split {
+    margin-bottom: 20px;
+}
+
+.mtt-article .article-wrap .info .preview {
+    font-size: 1.2rem;
+    line-height: 1.9rem;
+    font-weight: 700;
+    padding-right: 80px;
+    margin-bottom: 50px;
+}
+
+.mtt-article .article-wrap .info .author {
+    display: flex;
+    align-items: stretch;
+}
+
+.mtt-article .article-wrap .info .author .avatar {
+    flex-basis: 50px;
+    margin-right: 20px;
+}
+
+.mtt-article .article-wrap .info .author .avatar > img {
+    width: 100%;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.mtt-article .article-wrap .info .author-info .name {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+}
+
+.mtt-article .article-list {
+    display: flex;
+}
+
+.mtt-article .article-list .card {
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+}
