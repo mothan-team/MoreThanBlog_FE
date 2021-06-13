@@ -13,16 +13,16 @@ function Footer() {
             Hi, We are More Than Team, we are full-stack developers team from Viet Nam.🚀🚀🚀.Please conact us as email : <b>mothan.team@gmail.com</b>.
           </h3>
           <div className={styles.icons}>
-            <a className={styles.icon}>
+            <a className={styles.icon} href="https://www.facebook.com/">
               <i className="fa fa-facebook-square" aria-hidden="true"></i>
             </a>
-            <a className={styles.icon} href="https://www.facebook.com/">
+            <a className={styles.icon} href="https://www.skype.com/">
               <i className="fa fa-skype" aria-hidden="true"></i>
             </a>
-            <a className={styles.icon} href="https://www.skype.com/">
+            <a className={styles.icon} href="https://www.github.com/">
               <i className="fa fa-github" aria-hidden="true"></i>
             </a>
-            <a className={styles.icon} href="https://github.com/">
+            <a className={styles.icon} href="https://www.linkedin.com/">
               <i className="fa fa-linkedin-square" aria-hidden="true"></i>
             </a>
             <a className={styles.icon} href="https://twitter.com/">
