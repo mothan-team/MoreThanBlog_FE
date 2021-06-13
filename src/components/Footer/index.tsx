@@ -1,6 +1,7 @@
 import "./Footer.module.css";
 import styles from './Footer.module.css';
 import classNames from "classnames";
+import {Link} from "react-router-dom";
 
 function Footer() {
   return (
@@ -35,10 +36,10 @@ function Footer() {
           </div>
 
           <ul className="text-base md:text-lg font-black">
-            <li className="mb-4 hover:underline">Home</li>
-            <li className="mb-4 hover:underline">About</li>
-            <li className="mb-4 hover:underline">Contact</li>
-            <li className="mb-4 hover:underline">Source</li>
+            <li className="mb-4 hover:underline"> <Link to="/">Home</Link></li>
+            <li className="mb-4 hover:underline"><Link to="/about">About</Link></li>
+            <li className="mb-4 hover:underline"><Link to="/contact">Contact</Link></li>
+            <li className="mb-4 hover:underline"><Link to="/">Source</Link></li>
           </ul>
         </div>
       </div>

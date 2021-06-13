@@ -1,7 +1,5 @@
 import AppRoutes from "./AppRoutes";
 import { Nav } from "components/Nav";
-import { Footer } from "components/Footer";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   return (
@@ -14,4 +12,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
