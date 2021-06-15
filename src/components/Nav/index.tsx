@@ -1,5 +1,4 @@
 import { Menu, smallScreenDropdownItems } from "./Menu";
-import logo from "./logo.png";
 import { SearchIcon } from "@heroicons/react/outline";
 import { SmallScreenDropdown } from "./Dropdown";
 
@@ -19,7 +18,7 @@ function Nav() {
 }
 
 const AppLogo = () => {
-  return <img src={logo} alt="" className="h-20 w-20" />;
+  return <img src={process.env.PUBLIC_URL + 'asset/logo.png'} alt="" className="h-28 w-28" />;
 };
 
 export { Nav };

@@ -1,0 +1,49 @@
+form input{
+    width: 80%;
+    @apply bg-gray-400;
+    @apply text-2xl;
+    @apply py-5;
+    @apply mb-4;
+    @apply m-auto;
+    @apply text-center;
+    @apply px-3;
+    @apply border-none;
+    @apply rounded-3xl;
+    @apply bg-gray-100;
+    @apply mt-1;
+}
+
+form textarea{
+    @apply text-2xl;
+    @apply h-40;
+    @apply py-5;
+    @apply mb-4;
+    @apply m-auto;
+    width: 80%;
+    @apply px-3;
+    @apply border-4;
+    @apply rounded-3xl;
+    @apply mt-1;
+    @apply border-gray-300;
+}
+
+form textarea:focus{
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    border-color:  #fab492;
+}
+
+form button[type=submit]{
+    background-color: #fab492 !important;
+    width: 40%;
+    margin: auto;
+    padding: 1rem;
+    margin-top: 3rem;
+    border-radius: 5rem;
+    color: white;
+    @apply font-black;
+}
+
+form button[type=submit]:hover{
+    background-color: #f59a6c !important;
+}
