@@ -11,33 +11,41 @@ const TopFeature: FC<TopFeatureProps> = ({ features }) => {
     return (
         <div className="top-feature">
             <p className="title-group">FEATURED</p>
-            <div className="top-feature-wrap">
-                {features.map((item, index) => (
-                    <div className={`card ${item.backgroundColor}`} key={index}>
-                        <div className="img-wrap">
-                            <img
-                                src={item.image}
-                            />
-                        </div>
-                        <div className="card-info">
-                            <Link
-                                to={item.path}
-                                className="title"
-                            >
-                                {item.title}
-                            </Link>
-                            <div className="author-wrap">
-                                <Link
-                                    to={item.authorPath}
-                                    className="author"
-                                >
-                                    {item.author}
-                                </Link>
+            <div className="split-wrap">
+                <div className="split"></div>
+            </div>
+            {features && (
+                <div className="top-feature-wrap">
+                    {features.map((item, index) => (
+                        <div className="wrap-card" key={index}>
+                            <Link to={item.path} className="link-wrap-card"></Link>
+                            <div className={`card ${item.backgroundColor}`}>
+                                <div className="img-wrap">
+                                    <img
+                                        src={item.image}
+                                    />
+                                </div>
+                                <div className="card-info">
+                                    <Link
+                                        to={item.path}
+                                        className="title"
+                                    >
+                                        {item.title}
+                                    </Link>
+                                    <div className="author-wrap">
+                                        <Link
+                                            to={item.authorPath}
+                                            className="author"
+                                        >
+                                            {item.author}
+                                        </Link>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))}
-            </div>
+                    ))}
+                </div>
+            )}
         </div>
     )
 }
