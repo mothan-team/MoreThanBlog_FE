@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "./articles.css";
 import { getBackgroundColor } from "../../utils"
 import { useEffect, useState } from "react";
@@ -241,7 +240,6 @@ const Articles = (props: object) => {
   ];
 
   const [isLoadMore, setIsLoadMore] = useState(false);
-  const pageLimit = 6;
   const [page, setPage] = useState(1);
   const [featureList, setFeatureList] = useState<Article[]>([]);
   const [articleList, setArticleList] = useState<Article[]>([]);

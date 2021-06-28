@@ -21,7 +21,7 @@ const MainArticle: FC<MainArticleProps> = ({ mainArticles, isLoadMore, handleLoa
                     <div className="article-lastest">
                         <Link to={mainArticles[0].path}>
                             <div className="img-wrap">
-                                <img className="thumbnail" src={mainArticles[0].image}></img>
+                                <img className="thumbnail" src={mainArticles[0].image} alt=""></img>
                             </div>
                         </Link>
                         <div className="info">
@@ -39,7 +39,7 @@ const MainArticle: FC<MainArticleProps> = ({ mainArticles, isLoadMore, handleLoa
                             </div>
                             <div className="author">
                                 <div className="avatar">
-                                    <img src={mainArticles[0].authorImage}></img>
+                                    <img src={mainArticles[0].authorImage} alt=""></img>
                                 </div>
                                 <div className="author-info">
                                     <div className="name">{mainArticles[0].author}</div>
@@ -58,6 +58,7 @@ const MainArticle: FC<MainArticleProps> = ({ mainArticles, isLoadMore, handleLoa
                                             <div className="img-wrap">
                                                 <img
                                                     src={item.image}
+                                                    alt=""
                                                 />
                                             </div>
                                             <div className="card-info">
@@ -95,6 +96,7 @@ const MainArticle: FC<MainArticleProps> = ({ mainArticles, isLoadMore, handleLoa
                                             <div className={`card ${item.backgroundColor}`}>
                                                 <div className="img-wrap">
                                                     <img
+                                                        alt=""
                                                         src={item.image}
                                                     />
                                                 </div>

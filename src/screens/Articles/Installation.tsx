@@ -22,6 +22,7 @@ const Installation: FC<InstallationProps> = ({ installations }) => {
                             <div className={`card ${item.backgroundColor}`}>
                                 <div className="img-wrap">
                                     <img
+                                        alt=""
                                         src={item.image}
                                     />
                                 </div>

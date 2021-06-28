@@ -8,6 +8,7 @@ const FeatureHeader = (props: object) => {
             <div className={`feature-header-item1 rounded-3xl flex p-4 transition duration-200 transform hover:-translate-y-1 cursor-pointer ${getBackgroundColor()}`}>
                 <Link to="" className="hidden md:block">
                     <img
+                        alt=""
                         src={`${process.env.PUBLIC_URL}/assets/img/feature-header-item-1.jpeg`}
                         className="rounded-2xl"
                     />
@@ -22,6 +23,7 @@ const FeatureHeader = (props: object) => {
             <div className={`feature-header-item2 bg-blue-200 rounded-3xl flex p-4 transition duration-200 transform hover:-translate-y-1 cursor-pointer ${getBackgroundColor()}`}>
                 <Link to="" className="hidden md:block">
                     <img
+                        alt=""
                         src={`${process.env.PUBLIC_URL}/assets/img/feature-header-item-1.jpeg`}
                         className="rounded-2xl"
                     />
