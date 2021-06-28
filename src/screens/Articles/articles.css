@@ -1,0 +1,11 @@
+.mtt-article {
+    margin-top: 50px;
+}
+
+/*=========================REPONSIVE==========================*/
+
+@media screen and (max-width: 1024px) {
+    .mtt-article {
+        margin-top: 25px;
+    }
+}

@@ -1,13 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-main{
+main {
    margin: auto;
    width: 100%;
-   max-width: 1460px; 
+   max-width: 1460px;
 }
 
-.mw-1000{
-   max-width: 1000px; 
+.mw-1000 {
+   max-width: 1000px;
+}
+
+.bg-color1 {
+   background-color: #c3f4df;
+}
+
+.bg-color2 {
+   background-color: #b0f3f6;
+}
+
+.bg-color3 {
+   background-color: #e8e5ff;
+}
+
+.bg-color4 {
+   background-color: #ede7e7;
+}
+
+.bg-color5 {
+   background-color: #e5f4ca;
+}
+
+.bg-color6 {
+   background-color: #ffeab9;
+}
+
+.bg-color7 {
+   background-color: #fce5f0;
+}
+
+.bg-color8 {
+   background-color: #f4f4f7;
 }
