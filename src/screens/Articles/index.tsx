@@ -1,6 +1,6 @@
 import "./articles.css";
 import { getBackgroundColor } from "../../utils"
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Article } from "./ArticleModel";
 import { TopFeature } from "./TopFeature";
 import { Installation } from "./Installation";
@@ -8,236 +8,247 @@ import { FeatureHeader } from "./FeatureHeader";
 import { MainArticle } from "./MainArticle";
 
 const Articles = (props: object) => {
-  var features = [
-    {
-      path: "",
-      title: "Muộn rồi mà sao còn",
-      image: `${process.env.PUBLIC_URL}/assets/img/feature-header-item-1.jpeg`,
-      author: "More Than Team",
-      authorPath: "",
-      authorImage: "",
-      tag: "",
-      tagPath: "",
-      preview: "",
-      createDate: "",
-      timeToRead: "",
-      backgroundColor: getBackgroundColor()
-    },
-    {
-      path: "",
-      title: "Muộn rồi mà sao còn",
-      image: `${process.env.PUBLIC_URL}/assets/img/feature-header-item-1.jpeg`,
-      author: "More Than Team",
-      authorPath: "",
-      authorImage: "",
-      tag: "",
-      tagPath: "",
-      preview: "",
-      createDate: "",
-      timeToRead: "",
-      backgroundColor: getBackgroundColor()
-    },
-    {
-      path: "",
-      title: "Muộn rồi mà sao còn",
-      image: `${process.env.PUBLIC_URL}/assets/img/feature-header-item-1.jpeg`,
-      author: "More Than Team",
-      authorPath: "",
-      authorImage: "",
-      tag: "",
-      tagPath: "",
-      preview: "",
-      createDate: "",
-      timeToRead: "",
-      backgroundColor: getBackgroundColor()
-    },
-    {
-      path: "",
-      title: "Muộn rồi mà sao còn",
-      image: `${process.env.PUBLIC_URL}/assets/img/feature-header-item-1.jpeg`,
-      author: "More Than Team",
-      authorPath: "",
-      authorImage: "",
-      tag: "",
-      tagPath: "",
-      preview: "",
-      createDate: "",
-      timeToRead: "",
-      backgroundColor: getBackgroundColor()
-    },
-    {
-      path: "",
-      title: "Muộn rồi mà sao còn",
-      image: `${process.env.PUBLIC_URL}/assets/img/feature-header-item-1.jpeg`,
-      author: "More Than Team",
-      authorPath: "",
-      authorImage: "",
-      tag: "",
-      tagPath: "",
-      preview: "",
-      createDate: "",
-      timeToRead: "",
-      backgroundColor: getBackgroundColor()
-    }
-  ];
-  var articles = [
-    {
-      path: "",
-      title: "Dependency Injection Lifetime In .NET Core",
-      image: `${process.env.PUBLIC_URL}/assets/img/feature-header-item-1.jpeg`,
-      author: "More Than Team",
-      authorPath: "",
-      authorImage: `${process.env.PUBLIC_URL}/assets/img/feature-header-item-1.jpeg`,
-      tag: ".NET Framework",
-      tagPath: "",
-      preview: `The Pioneer of DI is Robert C. Martin. He wrote in his paper about "The Dependency Inversion Principle", which also known as DIP for short. This is eventually known as IoC/DI’s principle, just like now.`,
-      createDate: "May 5, 2021",
-      timeToRead: "4 minutes read",
-      backgroundColor: getBackgroundColor()
-    },
-    {
-      path: "",
-      title: "Muộn rồi mà sao còn",
-      image: `${process.env.PUBLIC_URL}/assets/img/feature-header-item-1.jpeg`,
-      author: "More Than Team",
-      authorPath: "",
-      authorImage: "",
-      tag: "",
-      tagPath: "",
-      preview: "",
-      createDate: "",
-      timeToRead: "",
-      backgroundColor: getBackgroundColor()
-    },
-    {
-      path: "",
-      title: "Muộn rồi mà sao còn",
-      image: `${process.env.PUBLIC_URL}/assets/img/feature-header-item-1.jpeg`,
-      author: "More Than Team",
-      authorPath: "",
-      authorImage: "",
-      tag: "",
-      tagPath: "",
-      preview: "",
-      createDate: "",
-      timeToRead: "",
-      backgroundColor: getBackgroundColor()
-    },
-    {
-      path: "",
-      title: "Muộn rồi mà sao còn",
-      image: `${process.env.PUBLIC_URL}/assets/img/feature-header-item-1.jpeg`,
-      author: "More Than Team",
-      authorPath: "",
-      authorImage: "",
-      tag: "",
-      tagPath: "",
-      preview: "",
-      createDate: "",
-      timeToRead: "",
-      backgroundColor: getBackgroundColor()
-    },
-    {
-      path: "",
-      title: "Muộn rồi mà sao còn",
-      image: `${process.env.PUBLIC_URL}/assets/img/feature-header-item-1.jpeg`,
-      author: "More Than Team",
-      authorPath: "",
-      authorImage: "",
-      tag: "",
-      tagPath: "",
-      preview: "",
-      createDate: "",
-      timeToRead: "",
-      backgroundColor: getBackgroundColor()
-    },
-    {
-      path: "",
-      title: "Muộn rồi mà sao còn",
-      image: `${process.env.PUBLIC_URL}/assets/img/feature-header-item-1.jpeg`,
-      author: "More Than Team",
-      authorPath: "",
-      authorImage: "",
-      tag: "",
-      tagPath: "",
-      preview: "",
-      createDate: "",
-      timeToRead: "",
-      backgroundColor: getBackgroundColor()
-    }
-  ];
-  var installations = [
-    {
-      path: "",
-      title: "Muộn rồi mà sao còn",
-      image: `${process.env.PUBLIC_URL}/assets/img/feature-header-item-1.jpeg`,
-      author: "More Than Team",
-      authorPath: "",
-      authorImage: "",
-      tag: "",
-      tagPath: "",
-      preview: "",
-      createDate: "",
-      timeToRead: "",
-      backgroundColor: getBackgroundColor()
-    },
-    {
-      path: "",
-      title: "Muộn rồi mà sao còn",
-      image: `${process.env.PUBLIC_URL}/assets/img/feature-header-item-1.jpeg`,
-      author: "More Than Team",
-      authorPath: "",
-      authorImage: "",
-      tag: "",
-      tagPath: "",
-      preview: "",
-      createDate: "",
-      timeToRead: "",
-      backgroundColor: getBackgroundColor()
-    },
-    {
-      path: "",
-      title: "Muộn rồi mà sao còn",
-      image: `${process.env.PUBLIC_URL}/assets/img/feature-header-item-1.jpeg`,
-      author: "More Than Team",
-      authorPath: "",
-      authorImage: "",
-      tag: "",
-      tagPath: "",
-      preview: "",
-      createDate: "",
-      timeToRead: "",
-      backgroundColor: getBackgroundColor()
-    },
-    {
-      path: "",
-      title: "Muộn rồi mà sao còn",
-      image: `${process.env.PUBLIC_URL}/assets/img/feature-header-item-1.jpeg`,
-      author: "More Than Team",
-      authorPath: "",
-      authorImage: "",
-      tag: "",
-      tagPath: "",
-      preview: "",
-      createDate: "",
-      timeToRead: "",
-      backgroundColor: getBackgroundColor()
-    },
-    {
-      path: "",
-      title: "Muộn rồi mà sao còn",
-      image: `${process.env.PUBLIC_URL}/assets/img/feature-header-item-1.jpeg`,
-      author: "More Than Team",
-      authorPath: "",
-      authorImage: "",
-      tag: "",
-      tagPath: "",
-      preview: "",
-      createDate: "",
-      timeToRead: "",
-      backgroundColor: getBackgroundColor()
-    }
-  ];
+  const getFeatures = () => {
+    return [
+      {
+        path: "",
+        title: "Muộn rồi mà sao còn",
+        image: `/assets/img/feature-header-item-1.jpeg`,
+        author: "More Than Team",
+        authorPath: "",
+        authorImage: "",
+        tag: "",
+        tagPath: "",
+        preview: "",
+        createDate: "",
+        timeToRead: "",
+        backgroundColor: getBackgroundColor()
+      },
+      {
+        path: "",
+        title: "Muộn rồi mà sao còn",
+        image: `/assets/img/feature-header-item-1.jpeg`,
+        author: "More Than Team",
+        authorPath: "",
+        authorImage: "",
+        tag: "",
+        tagPath: "",
+        preview: "",
+        createDate: "",
+        timeToRead: "",
+        backgroundColor: getBackgroundColor()
+      },
+      {
+        path: "",
+        title: "Muộn rồi mà sao còn",
+        image: `/assets/img/feature-header-item-1.jpeg`,
+        author: "More Than Team",
+        authorPath: "",
+        authorImage: "",
+        tag: "",
+        tagPath: "",
+        preview: "",
+        createDate: "",
+        timeToRead: "",
+        backgroundColor: getBackgroundColor()
+      },
+      {
+        path: "",
+        title: "Muộn rồi mà sao còn",
+        image: `/assets/img/feature-header-item-1.jpeg`,
+        author: "More Than Team",
+        authorPath: "",
+        authorImage: "",
+        tag: "",
+        tagPath: "",
+        preview: "",
+        createDate: "",
+        timeToRead: "",
+        backgroundColor: getBackgroundColor()
+      },
+      {
+        path: "",
+        title: "Muộn rồi mà sao còn",
+        image: `/assets/img/feature-header-item-1.jpeg`,
+        author: "More Than Team",
+        authorPath: "",
+        authorImage: "",
+        tag: "",
+        tagPath: "",
+        preview: "",
+        createDate: "",
+        timeToRead: "",
+        backgroundColor: getBackgroundColor()
+      }
+    ];
+  }
+
+  const getArticles = () => {
+    return [
+      {
+        path: "",
+        title: "Dependency Injection Lifetime In .NET Core",
+        image: `/assets/img/feature-header-item-1.jpeg`,
+        author: "More Than Team",
+        authorPath: "",
+        authorImage: `/assets/img/feature-header-item-1.jpeg`,
+        tag: ".NET Framework",
+        tagPath: "",
+        preview: `The Pioneer of DI is Robert C. Martin. He wrote in his paper about "The Dependency Inversion Principle", which also known as DIP for short. This is eventually known as IoC/DI’s principle, just like now.`,
+        createDate: "May 5, 2021",
+        timeToRead: "4 minutes read",
+        backgroundColor: getBackgroundColor()
+      },
+      {
+        path: "",
+        title: "Muộn rồi mà sao còn",
+        image: `/assets/img/feature-header-item-1.jpeg`,
+        author: "More Than Team",
+        authorPath: "",
+        authorImage: "",
+        tag: "",
+        tagPath: "",
+        preview: "",
+        createDate: "",
+        timeToRead: "",
+        backgroundColor: getBackgroundColor()
+      },
+      {
+        path: "",
+        title: "Muộn rồi mà sao còn",
+        image: `/assets/img/feature-header-item-1.jpeg`,
+        author: "More Than Team",
+        authorPath: "",
+        authorImage: "",
+        tag: "",
+        tagPath: "",
+        preview: "",
+        createDate: "",
+        timeToRead: "",
+        backgroundColor: getBackgroundColor()
+      },
+      {
+        path: "",
+        title: "Muộn rồi mà sao còn",
+        image: `/assets/img/feature-header-item-1.jpeg`,
+        author: "More Than Team",
+        authorPath: "",
+        authorImage: "",
+        tag: "",
+        tagPath: "",
+        preview: "",
+        createDate: "",
+        timeToRead: "",
+        backgroundColor: getBackgroundColor()
+      },
+      {
+        path: "",
+        title: "Muộn rồi mà sao còn",
+        image: `/assets/img/feature-header-item-1.jpeg`,
+        author: "More Than Team",
+        authorPath: "",
+        authorImage: "",
+        tag: "",
+        tagPath: "",
+        preview: "",
+        createDate: "",
+        timeToRead: "",
+        backgroundColor: getBackgroundColor()
+      },
+      {
+        path: "",
+        title: "Muộn rồi mà sao còn",
+        image: `/assets/img/feature-header-item-1.jpeg`,
+        author: "More Than Team",
+        authorPath: "",
+        authorImage: "",
+        tag: "",
+        tagPath: "",
+        preview: "",
+        createDate: "",
+        timeToRead: "",
+        backgroundColor: getBackgroundColor()
+      }
+    ];
+  }
+  const getInstallations = () => {
+    return [
+      {
+        path: "",
+        title: "Muộn rồi mà sao còn",
+        image: `/assets/img/feature-header-item-1.jpeg`,
+        author: "More Than Team",
+        authorPath: "",
+        authorImage: "",
+        tag: "",
+        tagPath: "",
+        preview: "",
+        createDate: "",
+        timeToRead: "",
+        backgroundColor: getBackgroundColor()
+      },
+      {
+        path: "",
+        title: "Muộn rồi mà sao còn",
+        image: `/assets/img/feature-header-item-1.jpeg`,
+        author: "More Than Team",
+        authorPath: "",
+        authorImage: "",
+        tag: "",
+        tagPath: "",
+        preview: "",
+        createDate: "",
+        timeToRead: "",
+        backgroundColor: getBackgroundColor()
+      },
+      {
+        path: "",
+        title: "Muộn rồi mà sao còn",
+        image: `/assets/img/feature-header-item-1.jpeg`,
+        author: "More Than Team",
+        authorPath: "",
+        authorImage: "",
+        tag: "",
+        tagPath: "",
+        preview: "",
+        createDate: "",
+        timeToRead: "",
+        backgroundColor: getBackgroundColor()
+      },
+      {
+        path: "",
+        title: "Muộn rồi mà sao còn",
+        image: `/assets/img/feature-header-item-1.jpeg`,
+        author: "More Than Team",
+        authorPath: "",
+        authorImage: "",
+        tag: "",
+        tagPath: "",
+        preview: "",
+        createDate: "",
+        timeToRead: "",
+        backgroundColor: getBackgroundColor()
+      },
+      {
+        path: "",
+        title: "Muộn rồi mà sao còn",
+        image: `/assets/img/feature-header-item-1.jpeg`,
+        author: "More Than Team",
+        authorPath: "",
+        authorImage: "",
+        tag: "",
+        tagPath: "",
+        preview: "",
+        createDate: "",
+        timeToRead: "",
+        backgroundColor: getBackgroundColor()
+      }
+    ];
+  }
+
+  const features = useMemo(() => getFeatures(), []);
+  const articles = useMemo(() => getArticles(), []);
+  const installations = useMemo(() => getInstallations(), []);
 
   const [isLoadMore, setIsLoadMore] = useState(false);
   const [page, setPage] = useState(1);
@@ -262,7 +273,7 @@ const Articles = (props: object) => {
           {
             path: "",
             title: "Muộn rồi mà sao còn",
-            image: `${process.env.PUBLIC_URL}/assets/img/feature-header-item-1.jpeg`,
+            image: `/assets/img/feature-header-item-1.jpeg`,
             author: "More Than Team",
             authorPath: "",
             authorImage: "",
@@ -276,7 +287,7 @@ const Articles = (props: object) => {
           {
             path: "",
             title: "Muộn rồi mà sao còn",
-            image: `${process.env.PUBLIC_URL}/assets/img/feature-header-item-1.jpeg`,
+            image: `/assets/img/feature-header-item-1.jpeg`,
             author: "More Than Team",
             authorPath: "",
             authorImage: "",
@@ -290,7 +301,7 @@ const Articles = (props: object) => {
           {
             path: "",
             title: "Muộn rồi mà sao còn",
-            image: `${process.env.PUBLIC_URL}/assets/img/feature-header-item-1.jpeg`,
+            image: `/assets/img/feature-header-item-1.jpeg`,
             author: "More Than Team",
             authorPath: "",
             authorImage: "",
@@ -305,7 +316,7 @@ const Articles = (props: object) => {
       }
       setArticleList(temArticleList);
     }
-  }, [page]);
+  }, [page, features, articles, installations]);
 
   return (
     <div className="mtt-article">
